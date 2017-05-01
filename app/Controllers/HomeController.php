@@ -2,15 +2,17 @@
 namespace App\Controllers;
 
 use App\Models\Article;
+
 /**
-* \HomeController
-*/
+ * \HomeController
+ */
 class HomeController extends BaseController
 {
-  
-  public function home()
-  {
-    Article::first();
-    require dirname(__FILE__).'/../views/home.php';
-  }
+
+    public function home()
+    {
+        $article = new Article();
+        dd($article->first());
+        require dirname(__FILE__) . '/../views/home.php';
+    }
 }

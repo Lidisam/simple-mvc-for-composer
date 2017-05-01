@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Slim\\PDO\\' => array($vendorDir . '/slim/pdo/src/PDO'),
     'NoahBuscher\\Macaw\\' => array($vendorDir . '/noahbuscher/macaw'),
     'App\\' => array($baseDir . '/app'),
 );

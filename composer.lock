@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c92784c37b574b12086f9222844e7eaa",
-    "content-hash": "4c157512afd1add46a31a68e7f41f617",
+    "hash": "40e5dd85a0df582e01e206e112135353",
+    "content-hash": "cae617c0df92ae742325f6c7b17ab442",
     "packages": [
         {
             "name": "noahbuscher/macaw",
@@ -36,6 +36,52 @@
             ],
             "description": "Simple PHP router class.",
             "time": "2016-10-13 22:34:57"
+        },
+        {
+            "name": "slim/pdo",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FaaPz/Slim-PDO.git",
+                "reference": "9424e6d5f3737a71722ab1f868c1d3090b63287d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/FaaPz/Slim-PDO/9424e6d5f3737a71722ab1f868c1d3090b63287d.zip",
+                "reference": "9424e6d5f3737a71722ab1f868c1d3090b63287d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Slim\\PDO\\": "src/PDO/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian de Laender",
+                    "email": "fabian@faapz.nl",
+                    "homepage": "http://faapz.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PDO database library for Slim Framework",
+            "homepage": "https://github.com/FaaPz/Slim-PDO",
+            "keywords": [
+                "database",
+                "framework",
+                "pdo",
+                "slim"
+            ],
+            "time": "2016-08-14 11:42:49"
         }
     ],
     "packages-dev": [],

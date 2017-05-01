@@ -6,7 +6,15 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
 {
+    public static $files = array (
+        'e320f53bb3364b7ed572ecc5ef33c5cf' => __DIR__ . '/../..' . '/app/helpers.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Slim\\PDO\\' => 9,
+        ),
         'N' => 
         array (
             'NoahBuscher\\Macaw\\' => 18,
@@ -18,6 +26,10 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
     );
 
     public static $prefixDirsPsr4 = array (
+        'Slim\\PDO\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/pdo/src/PDO',
+        ),
         'NoahBuscher\\Macaw\\' => 
         array (
             0 => __DIR__ . '/..' . '/noahbuscher/macaw',
@@ -29,8 +41,10 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
     );
 
     public static $classMap = array (
-        'App\\controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
-        'HomeController' => __DIR__ . '/../..' . '/app/Controllers/HomeController.php',
+        'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
+        'App\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Controllers/HomeController.php',
+        'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
+        'App\\Models\\BaseModel' => __DIR__ . '/../..' . '/app/Models/BaseModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
