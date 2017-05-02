@@ -1,5 +1,8 @@
 <?php
 namespace App\Models;
+
+use Tool\DB;
+
 /**
  * Article Model
  */
@@ -17,6 +20,6 @@ class Article extends BaseModel
 
     public function first()
     {
-        return parent::getInstance()->select()->from('articles');
+        return DB::getInstance()->select()->from('articles');
     }
 }

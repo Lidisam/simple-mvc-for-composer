@@ -7,10 +7,19 @@ namespace Composer\Autoload;
 class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
 {
     public static $files = array (
+        'e1edc6b39e340029dfa1d72c228b8497' => __DIR__ . '/..' . '/xiaoler/blade/src/helpers.php',
         'e320f53bb3364b7ed572ecc5ef33c5cf' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'X' => 
+        array (
+            'Xiaoler\\Blade\\' => 14,
+        ),
+        'T' => 
+        array (
+            'Tool\\' => 5,
+        ),
         'S' => 
         array (
             'Slim\\PDO\\' => 9,
@@ -26,6 +35,14 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
     );
 
     public static $prefixDirsPsr4 = array (
+        'Xiaoler\\Blade\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xiaoler/blade/src',
+        ),
+        'Tool\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tool',
+        ),
         'Slim\\PDO\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/pdo/src/PDO',
@@ -45,6 +62,8 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
         'App\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Controllers/HomeController.php',
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\BaseModel' => __DIR__ . '/../..' . '/app/Models/BaseModel.php',
+        'View' => __DIR__ . '/../..' . '/tool/View.php',
+        'tool\\DB' => __DIR__ . '/../..' . '/tool/DB.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

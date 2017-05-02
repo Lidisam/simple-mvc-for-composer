@@ -78,5 +78,47 @@
             "pdo",
             "slim"
         ]
+    },
+    {
+        "name": "xiaoler/blade",
+        "version": "0.3.1",
+        "version_normalized": "0.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/XiaoLer/blade.git",
+            "reference": "4a8ea96dfcf1887efc7ee3cfb5c52eeec389d7ec"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/XiaoLer/blade/4a8ea96dfcf1887efc7ee3cfb5c52eeec389d7ec.zip",
+            "reference": "4a8ea96dfcf1887efc7ee3cfb5c52eeec389d7ec",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2016-09-18 14:33:13",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/helpers.php"
+            ],
+            "psr-4": {
+                "Xiaoler\\Blade\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Scholer Liu",
+                "email": "scholer_l@live.com"
+            }
+        ],
+        "description": "an independent version of laravel view template - blade",
+        "homepage": "http://0x1.im"
     }
 ]

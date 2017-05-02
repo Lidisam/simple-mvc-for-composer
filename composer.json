@@ -1,15 +1,18 @@
 {
   "require": {
     "noahbuscher/macaw": "dev-master",
-    "slim/pdo": "~1.9"
+    "slim/pdo": "~1.9",
+    "xiaoler/blade": "^0.3.1"
   },
   "autoload": {
     "classmap": [
       "app/Controllers",
-      "app/Models"
+      "app/Models",
+      "tool"
     ],
     "psr-4": {
-      "App\\": "app/"
+      "App\\": "app/",
+      "Tool\\": "tool/"
     },
     "files": [
       "app/helpers.php"

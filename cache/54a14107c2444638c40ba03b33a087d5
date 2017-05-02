@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo e($b); ?></title>
+</head>
+<body>
+<div><?php echo e($a); ?></div>
+</body>
+</html>
