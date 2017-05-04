@@ -9,6 +9,10 @@ Macaw::get('/', 'App\Controllers\HomeController@home');
 // Macaw::get('/', function() {
 //   echo 'Hello world!';
 // });
+//测试api控制器
+Macaw::post('/test', 'App\Controllers\HomeController@test');
+
+
 
 
 

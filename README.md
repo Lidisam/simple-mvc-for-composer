@@ -1,8 +1,12 @@
 ### 要求
 文件不能存放在中文目录下
+PHP >= 5.3
 
 
 ### 配置方法：
+首先： 
+> composer install
+
 打开tool/DB.php，将以下参数配置为本机：
 
 >
@@ -21,4 +25,10 @@
     "slim/pdo": "~1.9",
     "xiaoler/blade": "^0.3.1"
       
-对应文档用法可在 https://packagist.org/ 获取。
+注：对应文档用法可在 https://packagist.org/ 获取。
+
+
+api文档用法:
+- 在cli下执行:
+> php apidoc.php
+

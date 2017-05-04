@@ -120,5 +120,64 @@
         ],
         "description": "an independent version of laravel view template - blade",
         "homepage": "http://0x1.im"
+    },
+    {
+        "name": "crada/php-apidoc",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "Crada/Apidoc",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/calinrada/php-apidoc.git",
+            "reference": "8ed629ebfbde6a1ddc829577492ba6fd10ba9555"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/calinrada/php-apidoc/8ed629ebfbde6a1ddc829577492ba6fd10ba9555.zip",
+            "reference": "8ed629ebfbde6a1ddc829577492ba6fd10ba9555",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "time": "2016-10-24 15:05:56",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.3-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Crada": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Calin Rada",
+                "email": "rada.calin@gmail.com"
+            },
+            {
+                "name": "Borja Santos-Diez",
+                "email": "borja@santosdiez.es"
+            },
+            {
+                "name": "Kevin Saliou",
+                "email": "kevin@saliou.name"
+            }
+        ],
+        "description": "Generate documentation for php API based application. No dependency. No framework required.",
+        "homepage": "https://github.com/calinrada/php-apidoc",
+        "keywords": [
+            "api",
+            "documentation",
+            "generator",
+            "php"
+        ]
     }
 ]

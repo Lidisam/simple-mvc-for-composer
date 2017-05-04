@@ -4,6 +4,9 @@
     "slim/pdo": "~1.9",
     "xiaoler/blade": "^0.3.1"
   },
+  "require-dev": {
+    "crada/php-apidoc": "@dev"
+  },
   "autoload": {
     "classmap": [
       "app/Controllers",

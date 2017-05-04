@@ -57,13 +57,23 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'C' => 
+        array (
+            'Crada' => 
+            array (
+                0 => __DIR__ . '/..' . '/crada/php-apidoc',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
         'App\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Controllers/HomeController.php',
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\BaseModel' => __DIR__ . '/../..' . '/app/Models/BaseModel.php',
-        'View' => __DIR__ . '/../..' . '/tool/View.php',
-        'tool\\DB' => __DIR__ . '/../..' . '/tool/DB.php',
+        'Tool\\DB' => __DIR__ . '/../..' . '/tool/DB.php',
+        'Tool\\View' => __DIR__ . '/../..' . '/tool/View.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -71,6 +81,7 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8b781e79c0accf2caa7295c68504ccae::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8b781e79c0accf2caa7295c68504ccae::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit8b781e79c0accf2caa7295c68504ccae::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit8b781e79c0accf2caa7295c68504ccae::$classMap;
 
         }, null, ClassLoader::class);
