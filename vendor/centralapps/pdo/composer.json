@@ -1,0 +1,21 @@
+{
+	"name": "centralapps/pdo",
+	"type": "library",
+	"description": "Extended PDO and PDOStatement classes for development stats",
+	"keywords": ["pdo", "database", "development", "stats"],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"authors": [
+		{
+			"name": "Michael Peacock",
+			"email": "mkpeacock@gmail.com",
+			"homepage": "http://www.twitter.com/michaelpeacock",
+			"role": "developer"
+		}
+	],
+	"license": "MIT",
+	"autoload": {
+		"psr-0": { "CentralApps\\Pdo": "src/"}
+	}
+}

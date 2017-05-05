@@ -2,17 +2,25 @@
 namespace App\Controllers;
 
 use App\Models\Article;
+use App\Repositories\AuthRepository;
 use Tool\View;
 
 
 class HomeController extends BaseController
 {
 
+    protected $auth;
+
+    public function __construct(AuthRepository $auth)
+    {
+        $this->auth = $auth;
+    }
+
     public function home()
     {
         $article = new Article();
-        //TODO:该PDO有问题，需要切换成另一个https://packagist.org/packages/aura/sqlquery
         $data = $article->first();
+        var_dump($data);
         echo View::getView()->make('home', ['a' => '这是aaa', 'b' => 'b是标题'])->render();
     }
 

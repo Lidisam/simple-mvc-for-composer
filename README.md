@@ -27,7 +27,6 @@ PHP >= 5.3
       
 注：对应文档用法可在 https://packagist.org/ 获取。
 
-
 api文档用法:
 - 在cli下执行:
 > php apidoc.php
