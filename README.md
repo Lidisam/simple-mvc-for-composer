@@ -1,6 +1,6 @@
 ### 要求
 文件不能存放在中文目录下
-PHP >= 5.3
+PHP >= 5.6.4
 
 
 ### 配置方法：
@@ -22,8 +22,9 @@ PHP >= 5.3
 该框架引入了如下package:
 >     
     "noahbuscher/macaw": "dev-master",
-    "slim/pdo": "~1.9",
+    "illuminate/database": "*"
     "xiaoler/blade": "^0.3.1"
+    "crada/php-apidoc": "@dev"
       
 注：对应文档用法可在 https://packagist.org/ 获取。
 
