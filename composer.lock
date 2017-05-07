@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d862faaf0b9515d5e35dcd10a6f142f2",
-    "content-hash": "2eb45bc0b1659d53d5c1cbd70e818244",
+    "hash": "0e4364cb21d458f6cad0984b0a65bdfc",
+    "content-hash": "8ac969b56ba7f91c905e0b43dc8790fb",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -406,52 +406,6 @@
                 "random"
             ],
             "time": "2017-03-13 16:27:32"
-        },
-        {
-            "name": "slim/pdo",
-            "version": "1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FaaPz/Slim-PDO.git",
-                "reference": "9424e6d5f3737a71722ab1f868c1d3090b63287d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/FaaPz/Slim-PDO/9424e6d5f3737a71722ab1f868c1d3090b63287d.zip",
-                "reference": "9424e6d5f3737a71722ab1f868c1d3090b63287d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pdo": "*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Slim\\PDO\\": "src/PDO/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabian de Laender",
-                    "email": "fabian@faapz.nl",
-                    "homepage": "http://faapz.nl",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PDO database library for Slim Framework",
-            "homepage": "https://github.com/FaaPz/Slim-PDO",
-            "keywords": [
-                "database",
-                "framework",
-                "pdo",
-                "slim"
-            ],
-            "time": "2016-08-14 11:42:49"
         },
         {
             "name": "symfony/polyfill-mbstring",

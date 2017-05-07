@@ -11,16 +11,16 @@ class HomeController extends BaseController
 
     protected $auth;
 
-    public function __construct(AuthRepository $auth)
+    public function __construct()
     {
-        $this->auth = $auth;
+        $this->auth = new AuthRepository();
     }
 
     public function home()
     {
         $article = new Article();
         $data = $article->first();
-        var_dump($data);
+//        var_dump($data);
         echo View::getView()->make('home', ['a' => '这是aaa', 'b' => 'b是标题'])->render();
     }
 

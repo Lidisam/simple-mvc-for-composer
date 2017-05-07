@@ -10,6 +10,5 @@ return array(
     'App\\Controllers\\HomeController' => $baseDir . '/app/Controllers/HomeController.php',
     'App\\Models\\Article' => $baseDir . '/app/Models/Article.php',
     'App\\Models\\BaseModel' => $baseDir . '/app/Models/BaseModel.php',
-    'Tool\\DB' => $baseDir . '/tool/DB.php',
     'Tool\\View' => $baseDir . '/tool/View.php',
 );

@@ -27,7 +27,6 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Translation\\' => 30,
-            'Slim\\PDO\\' => 9,
         ),
         'N' => 
         array (
@@ -66,10 +65,6 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Slim\\PDO\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/slim/pdo/src/PDO',
         ),
         'NoahBuscher\\Macaw\\' => 
         array (
@@ -123,7 +118,6 @@ class ComposerStaticInit8b781e79c0accf2caa7295c68504ccae
         'App\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Controllers/HomeController.php',
         'App\\Models\\Article' => __DIR__ . '/../..' . '/app/Models/Article.php',
         'App\\Models\\BaseModel' => __DIR__ . '/../..' . '/app/Models/BaseModel.php',
-        'Tool\\DB' => __DIR__ . '/../..' . '/tool/DB.php',
         'Tool\\View' => __DIR__ . '/../..' . '/tool/View.php',
     );
 
