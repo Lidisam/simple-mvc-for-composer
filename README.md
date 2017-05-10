@@ -32,3 +32,9 @@ api文档用法:
 - 在cli下执行:
 > php apidoc.php
 
+
+单元测试用法:
+> 
+    > cd tests 
+    > phpunit --verbose TestDemo
+注：phpunit版本需要对应composer.json里面的^5.7.9版本

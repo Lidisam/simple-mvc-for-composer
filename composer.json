@@ -5,7 +5,8 @@
     "illuminate/database": "*"
   },
   "require-dev": {
-    "crada/php-apidoc": "@dev"
+    "crada/php-apidoc": "@dev",
+    "phpunit/phpunit": "5.7.*"
   },
   "autoload": {
     "classmap": [
@@ -20,5 +21,13 @@
     "files": [
       "app/helpers.php"
     ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestDemo.php"
+    ],
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
   }
 }
