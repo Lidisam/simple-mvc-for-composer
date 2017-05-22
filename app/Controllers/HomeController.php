@@ -3,26 +3,28 @@ namespace App\Controllers;
 
 use App\Models\Article;
 use App\Repositories\AuthRepository;
+use App\Repositories\DemoRepository;
 use Tool\View;
 
 
 class HomeController extends BaseController
 {
 
-    protected $auth;
+    protected $demo;
 
     public function __construct()
     {
-        $this->auth = new AuthRepository();
+        $this->demo = new DemoRepository();
     }
 
     public function home()
     {
         $article = new Article();
         $data = $article->first();
-//        var_dump($data);
+
         echo View::getView()->make('home', ['a' => '这是aaa', 'b' => 'b是标题'])->render();
     }
+
 
     /**
      * @ApiDescription(section="Test", description="首页测试控制器")
@@ -38,5 +40,13 @@ class HomeController extends BaseController
     public function test()
     {
         echo json_encode($_POST['id']);
+    }
+
+    /**
+     * 钩子演示demo
+     */
+    public function hook_demo()
+    {
+        $this->demo->hook->update();  //执行钩子方法
     }
 }

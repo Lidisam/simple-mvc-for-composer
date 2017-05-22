@@ -29,6 +29,7 @@ class DependencyAndDataProviderComboTest extends TestCase
         return 'second';
     }
 
+
     /**
      * @depends      testProducerFirst
      * @depends      testProducerSecond

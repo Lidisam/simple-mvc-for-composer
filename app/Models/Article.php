@@ -16,4 +16,5 @@ class Article extends Model
     {
         return $this->all()->toArray();
     }
+
 }
