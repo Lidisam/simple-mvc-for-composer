@@ -6,81 +6,92 @@ namespace App\Service;
 class RsaService
 {
 
-    /**
-     * 1024 位
-     * 生成方法：
-     * openssl genrsa -out rsa_private_key.pem 1024
-     * openssl pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt -out private_key.pem
-     * openssl rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
-     * @var string
-     */
-    protected $private_key = '-----BEGIN RSA PRIVATE KEY-----
-MIICXQIBAAKBgQC3//sR2tXw0wrC2DySx8vNGlqt3Y7ldU9+LBLI6e1KS5lfc5jl
-TGF7KBTSkCHBM3ouEHWqp1ZJ85iJe59aF5gIB2klBd6h4wrbbHA2XE1sq21ykja/
-Gqx7/IRia3zQfxGv/qEkyGOx+XALVoOlZqDwh76o2n1vP1D+tD3amHsK7QIDAQAB
-AoGBAKH14bMitESqD4PYwODWmy7rrrvyFPEnJJTECLjvKB7IkrVxVDkp1XiJnGKH
-2h5syHQ5qslPSGYJ1M/XkDnGINwaLVHVD3BoKKgKg1bZn7ao5pXT+herqxaVwWs6
-ga63yVSIC8jcODxiuvxJnUMQRLaqoF6aUb/2VWc2T5MDmxLhAkEA3pwGpvXgLiWL
-3h7QLYZLrLrbFRuRN4CYl4UYaAKokkAvZly04Glle8ycgOc2DzL4eiL4l/+x/gaq
-deJU/cHLRQJBANOZY0mEoVkwhU4bScSdnfM6usQowYBEwHYYh/OTv1a3SqcCE1f+
-qbAclCqeNiHajCcDmgYJ53LfIgyv0wCS54kCQAXaPkaHclRkQlAdqUV5IWYyJ25f
-oiq+Y8SgCCs73qixrU1YpJy9yKA/meG9smsl4Oh9IOIGI+zUygh9YdSmEq0CQQC2
-4G3IP2G3lNDRdZIm5NZ7PfnmyRabxk/UgVUWdk47IwTZHFkdhxKfC8QepUhBsAHL
-QjifGXY4eJKUBm3FpDGJAkAFwUxYssiJjvrHwnHFbg0rFkvvY63OSmnRxiL4X6EY
-yI9lblCsyfpl25l7l5zmJrAHn45zAiOoBrWqpM5edu7c
------END RSA PRIVATE KEY-----';
-    protected $public_key = '-----BEGIN PUBLIC KEY-----
-MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3//sR2tXw0wrC2DySx8vNGlqt
-3Y7ldU9+LBLI6e1KS5lfc5jlTGF7KBTSkCHBM3ouEHWqp1ZJ85iJe59aF5gIB2kl
-Bd6h4wrbbHA2XE1sq21ykja/Gqx7/IRia3zQfxGv/qEkyGOx+XALVoOlZqDwh76o
-2n1vP1D+tD3amHsK7QIDAQAB
------END PUBLIC KEY-----';
-    //传入数据   例：'我是数据~~~~~~~~'
-    protected $data;
 
-    function __construct($data)
+    protected $private_key = '-----BEGIN RSA PRIVATE KEY-----
+MIICXgIBAAKBgQDIlaEGaNQ726AUjXfezwCW9h6igNR8/qsQoiTIY76BSu2MDtLW
+QUn1Ui/HjtS7u1/TVmnGkS5boBZovsuNZtF3NyYKf/Ajh8uR8P5ytEiq2WPJrcAW
+OyRpbbuiLX3TQj+8aerfpP1dNiQrndjM9VSDqZ6WhjgZ+e4h50HPNJmT2QIDAQAB
+AoGBAJ9KXGcnpqumfVj1A6W4hAJej/ODFbvxzk3WRhmxRF+O7liUiRDHJoGgc/sp
+TX2MjsvZSwT61HLFDia+pg20AlEe7pALmdd6TFGbEJFO1WdACpDKOLqM9GEGNKu5
+jIwCfuskrSve5++yJOkPzAH7P8aZCQhzON+9AetfPzRQb3bRAkEA7eoJ9KfDXMxL
+RD5D+I/OjO8/KbEXyTRF+mkloW4RSk+xVXQP2e86701Vu/FQTC1Q8QePtKymWrEs
+fuSFZprl9QJBANfVIUmw2JmDpFoTB0XFLUZmrP4vdtRwETfsjdw7aNMTjdQ/UyAT
+9bEvn8RbRu5kQZYvQwEDwaAQ8DAf7FqQ49UCQBvlCO3KjblfqqOBuW53TfxwQLOe
+s+8/VcUadvMKeLSBy4T9aq5ewkY0hwzWKlgEKC1aeZrxcz/G7jSijpGNL9ECQQCo
+pkeul1uJCU6Be+Dw6dQo8M44iMon0bICqvtmnZ2ZYewvb5P6ut3/KCGFg3V3jiuZ
+uTB4OIEyHEoysJ81XYZJAkEAlim6un8OR/fsScnu1JAcVvHhP4mJSfcrnJUgeKWz
+1QLfTQTAyBhXYkdny0cuQe4AN8pAStKPpplOP3+XEqEtdw==
+-----END RSA PRIVATE KEY-----';
+
+    protected $public_key = '-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIlaEGaNQ726AUjXfezwCW9h6i
+gNR8/qsQoiTIY76BSu2MDtLWQUn1Ui/HjtS7u1/TVmnGkS5boBZovsuNZtF3NyYK
+f/Ajh8uR8P5ytEiq2WPJrcAWOyRpbbuiLX3TQj+8aerfpP1dNiQrndjM9VSDqZ6W
+hjgZ+e4h50HPNJmT2QIDAQAB
+-----END PUBLIC KEY-----';
+
+    public $pi_key;
+    public $pu_key;
+
+
+    function __construct()
     {
-        $this->data = $data;
+        //这个函数可用来判断私钥是否是可用的，可用返回资源id Resource id
+        $this->pi_key = openssl_pkey_get_private($this->private_key);
+        //这个函数可用来判断公钥是否是可用的
+        $this->pu_key = openssl_pkey_get_public($this->public_key);
     }
 
-
     /**
-     * 私匙加密
-     * @param $data
+     * @desc 私匙加密 [公钥可解密]
+     * @param $data [待加密数据]
      * @return string
      */
-    public function private_encrypt($data)
+    public function privateEncrypt($data)
     {
         openssl_private_encrypt($data, $encrypted, $this->pi_key);//私钥加密
-        return base64_encode($encrypted);//加密后的内容通常含有特殊字符，需要编码转换下，在网络间通过url传输时要注意base64编码是否是url安全的
+        $encrypted = base64_encode($encrypted);
+
+        return $encrypted;
     }
 
     /**
-     * 公匙解密
-     * @param $encrypted
+     * @desc 公钥解密 [解密私匙加密的数据]
+     * @param $encrypted [已加密数据，待解密数据]
      * @return bool
      */
-    public function public_decrypt($encrypted)
+    public function publicDecrypt($encrypted)
     {
-        return openssl_public_decrypt(base64_decode($encrypted), $decrypted, $this->pu_key);//私钥加密的内容通过公钥可用解密出来
+        openssl_public_decrypt(base64_decode($encrypted), $decrypted, $this->pu_key);
+        return $decrypted;
     }
 
+
     /**
-     * 公匙加密
-     * @param $data
+     * @desc 公钥加密 [私匙可解密]
+     * @param $data [待加密数据]
+     * @return string
      */
-    public function public_encrypt($data)
+    public function publicEncrypt($data)
     {
+        $encrypted = '';
         openssl_public_encrypt($data, $encrypted, $this->pu_key);//公钥加密
+        $encrypted = base64_encode($encrypted);
+
+        return $encrypted;
     }
 
     /**
-     * 私匙解密
-     * @param $encrypted
+     * @desc 私匙解密 [解密公匙加密的数据]
+     * @param $encrypted [已加密数据，待解密数据]
+     * @return bool
      */
-    public function private_decrypt($encrypted)
+    public function privateDecrypt($encrypted)
     {
-        openssl_private_decrypt(base64_decode($encrypted), $decrypted, $this->pi_key);//私钥解密
+        $decrypted = '';
+        openssl_private_decrypt(base64_decode($encrypted), $decrypted, $this->pi_key);
+        return $decrypted;
     }
-
 }
+
+
